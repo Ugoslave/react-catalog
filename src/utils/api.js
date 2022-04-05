@@ -1,7 +1,6 @@
 class Api {  // создаем и экспортируем класс работы с API
-  constructor(dataConfig) {
-    this._url = dataConfig.url;
-    this._headers = dataConfig.headers;
+  constructor(data) {
+    this._url = data.url;
   }
 
   _checkResponse(res) { // создаем приватный метод для обработки ошибок
@@ -12,19 +11,14 @@ class Api {  // создаем и экспортируем класс работ
     }
   }
 
-  getAllRates() {  // метод получения котировок с сервера
-    return fetch(`${this._url}daily_json.js`)
-             .then(this._checkResponse);
-  }
-
-  getArchiveRates = (date) => {  // метод получения архивных котировок с сервера
-    return fetch(`${this._url}archive/${date}/daily_json.js`)
+  getItems() {  // метод получения товаров с сервера
+    return fetch(`${this._url}/products`)
              .then(this._checkResponse);
   }
 }
 
 const api = new Api ({  // записываем в переменную экземпляр класса Api;
-  url: "https://www.cbr-xml-daily.ru/",
+  url: "https://artisant.io/api",
 });
 
 export default api;

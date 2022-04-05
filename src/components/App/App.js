@@ -9,21 +9,27 @@ import './App.css';
 
 
 const App = () => {
+  const [cards, setCards] = React.useState([]);
 
+  React.useEffect(() => {
+    api
+      .getItems()
+      .then((res) => setCards(res.data.products))
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(cards);
 
   return (
-    <>
-      <div className="app">
-        <Header />
-        <section className="data-box">
-          <ul className="rates-list">
-            <Card />
-          </ul>
-        </section>
-        <Footer />
-      </div>
-      
-    </>
+    <div className="app">
+      <Header />
+      <section className="cards">
+        <ul className="card-container">
+          <Card />
+        </ul>
+      </section>
+      <Footer />
+    </div>
   );
 }
 

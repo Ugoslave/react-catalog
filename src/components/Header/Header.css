@@ -1,27 +1,27 @@
 .header {
+  margin: 0;
+  padding-bottom: 32px;
   box-sizing: border-box;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: seagreen;
+  border: solid 1px green;
 }
 
 .header__title {
   margin: 0;
-  padding: 0;
-  font-family: 'Euclid Circular A';
-  font-weight: 600;
-  font-size: 3em;
-  text-shadow: 5px 10px 10px yellowgreen;
+  padding-bottom: 24px;
+  max-width: 210px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
 }
 
 .header__subtitle {
   margin: 0;
-  padding: 15px;
-  font-family: 'Euclid Circular A';
+  max-width: 250px;
   font-weight: normal;
-  font-size: 1em;
-  text-shadow: 5px 5px 5px lime;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #828282;
 }
