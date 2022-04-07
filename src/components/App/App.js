@@ -18,14 +18,23 @@ const App = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(cards);
+  const handleButtonClick = () => {
+    setCards(cards.filter((i) => i.quantity_available > 0));
+  }
 
   return (
     <div className="app">
-      <Header />
+      <Header onClick={handleButtonClick} />
       <section className="cards">
         <ul className="cards-container">
-          <Card />
+          {cards.map((item) => {
+            return (
+              <Card
+                key={item.product_id}
+                card={item}
+              />
+            );
+          })}
         </ul>
       </section>
       <Footer />
