@@ -1,7 +1,14 @@
 .footer {
   margin: 0;
   padding-top: 36px;
+  padding-bottom: 36px;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 32px;
+  }
 }
 
 .footer__copyright {
@@ -10,4 +17,11 @@
   font-size: 12px;
   line-height: 24px;
   color: #808080;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    font-size: 16px;
+  line-height: 18px;
+  }
 }

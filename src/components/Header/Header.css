@@ -6,6 +6,12 @@
   flex-direction: column;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1379px) {
+  .header {
+    padding: 32px;
+  }
+}
+
 .header__title {
   margin: 0;
   padding-bottom: 20px;
@@ -37,6 +43,13 @@
 .header__button:hover {
   cursor: pointer;
   color: #0040E5;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1379px) {
+  .header__button {
+    width: 175px;
+    height: 30px;
+  }
 }
 
 .header__subtitle {

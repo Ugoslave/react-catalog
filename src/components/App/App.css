@@ -8,6 +8,27 @@
   box-sizing: border-box;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .app {
+    max-width: 768px;
+    padding: 32px 32px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .app {
+    max-width: 1279px;
+    padding: 32px 32px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .app {
+    max-width: 1380px;
+    padding: 32px 32px 0;
+  }
+}
+
 .cards {
   margin: 0;
   padding: 0;
@@ -17,4 +38,12 @@
   margin: 0;
   list-style: none;
   padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
