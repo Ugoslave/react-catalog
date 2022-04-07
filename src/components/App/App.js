@@ -24,7 +24,7 @@ const App = () => {
     <div className="app">
       <Header />
       <section className="cards">
-        <ul className="card-container">
+        <ul className="cards-container">
           <Card />
         </ul>
       </section>

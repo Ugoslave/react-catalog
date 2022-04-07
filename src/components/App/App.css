@@ -9,3 +9,14 @@
   box-sizing: border-box;
   border: solid 1px red;
 }
+
+.cards {
+  margin: 0;
+  padding: 0;
+}
+
+.cards-container {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
